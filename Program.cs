@@ -70,9 +70,7 @@ internal class Program
             }
         }
         l = l.OrderBy( x => x.Sjun ).ToList();
-        foreach( var i in Enumerable.Range( 0, l.Count ) ) {
-            WriteLine( string.Join( "\n", l[i].Ljun ) );
-        }
+        WriteLine( string.Join( "\n", l.Select( x => x.Ljun ) ) );
         return;
     }
 }
